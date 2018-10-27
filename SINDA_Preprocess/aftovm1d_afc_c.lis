@@ -1,0 +1,833 @@
+ (C) COPYRIGHT 1982-1998 J.D.GASKI SINDA/G VERSION-1.80  - NETWORK ANALYSIS ASSOCIATES, INC.
+        BCD 3THERMAL LPCS                                                        
+ *** NOTE: DYNAMIC STORAGE BUCKET =2000000, INFO ONLY
+        BCD 9AFT OV SKIRT                                                        
+        END                                                                      
+        BCD 3NODE DATA                                                           
+ C        FORWARD OV ALUMINUM-2219 SKIRT                                         
+            -1,  -310.,0.     $ LOX TEMPERATURE                                  
+            2,   70.,  1.     $ MIDPOINT OF AL (L=4.37in., t=0.30in.)            
+            3,   70., -1.     $ SURFACE INTERFACE                                
+            4,   70.,  1.     $ MIDPOINT OF AL (L=2.47in., t=0.22in.)            
+            5,   70., -1.     $ SURFACE INTERFACE                                
+            51,  70.,  1.     $ MIDPOINT OF AL (L=2.45in., t=0.16in.)            
+            52,  70., -1.     $ SURFACE INTERFACE                                
+            6,   70.,  1.     $ MIDPOINT OF AL (L=2.31in., t=0.38in.)            
+            7,   70., -1.     $ SURFACE INTERFACE                                
+            8,   70.,  1.     $ MIDPOINT OF AL (L=2.00in., t=0.22in.)            
+            9,   70., -1.     $ SURFACE INTERFACE                                
+            10,  70.,  1.     $ MIDPOINT OF AL (L=23.14in., t=0.095in.)          
+            11,  70., -1.     $ SURFACE INTERFACE                                
+            12,  70.,  1.     $ MIDPOINT OF AL (L=1.80in., t=0.242in.)           
+            13,  70., -1.     $ SURFACE INTERFACE                                
+ C        ALUMINUM-7075 SPLICE AREA                                              
+            14,  70.,  1.     $ MIDPOINT OF AL (L=2.54in., t=0.15in.)            
+            15,  70., -1.     $ SURFACE INTERFACE                                
+            16,  70.,  1.     $ MIDPOINT OF AL (L=2.54in., t=0.242in.)           
+            17,  70., -1.     $ SURFACE INTERFACE                                
+            18,  70.,  1.     $ MIDPOINT OF BMI (L=2.54in., t=0.15in.)           
+            19,  70., -1.     $ SURFACE                                          
+ C        MIDSPLICE POINT (STATION 1250)                                         
+            20,  70., -1.     $ SURFACE INTERFACE                                
+            21,  70., -1.     $ SURFACE INTERFACE                                
+            22,  70., -1.     $ SURFACE INTERFACE                                
+            2000,70.,  1.     $ MIDPOINT OF BMI (L=0.15in., t=0.15in.)           
+            2701,70., -1.     $ SURFACE INTERFACE                                
+ C        ALUMINUM-7075 SPLICE AREA - COMPOSITE SIDE                             
+            23,  70.,  1.     $ MIDPOINT OF AL (L=2.88in., t=0.15in.)            
+            24,  70., -1.     $ SURFACE INTERFACE                                
+            25,  70.,  1.     $ MIDPOINT OF COMPOSITE (L=2.88in., t=0.242in      
+            26,  70., -1.     $ SURFACE INTERFACE                                
+            27,  70.,  1.     $ MIDPOINT OF BMI (L=2.88in., t=0.15in.)           
+            28,  70., -1.     $ SURFACE                                          
+ C        BMI FRAME                                                              
+            2001,70.,-1.      $ SURFACE INTERFACE                                
+            2002,70., 1.      $ MIDPOINT OF BMI (L=8.90in., t=0.15in.)           
+            2003,70.,-1.      $ TOP SURFACE                                      
+            2004,70.,-1.      $ BOTTOM SURFACE                                   
+            2005,70.,-1.      $ END SURFACE                                      
+ C        INTERIOR SKIRT SURFACES                                                
+            29,  70., -1.     $ SURFACE                                          
+            30,  70., -1.     $ SURFACE                                          
+            301, 70., -1.     $ SURFACE                                          
+            31,  70., -1.     $ SURFACE                                          
+            32,  70., -1.     $ SURFACE                                          
+            33,  70., -1.     $ SURFACE                                          
+            34,  70., -1.     $ SURFACE                                          
+ C        EXTERIOR SKIRT SURFACES (OML)                                          
+            114,  70., -1.    $ SURFACE   $ AL 7075                              
+            123,  70., -1.    $ SURFACE   $ AL 7075                              
+            129,  70., -1.    $ SURFACE                                          
+            130,  70., -1.    $ SURFACE                                          
+            1301, 70., -1.    $ SURFACE                                          
+            131,  70., -1.    $ SURFACE                                          
+            132,  70., -1.    $ SURFACE                                          
+            133,  70., -1.    $ SURFACE                                          
+            134,  70., -1.    $ SURFACE                                          
+ C        GAS TEMPERATURES                                                       
+            35,   70.,  1.    $ INTERNAL AMBIENT AIR                             
+            3555, 70.,  1.    $ INTERNAL AMBIENT AIR, data capture only, afc 6/2/
+            36,   70., -1.    $ AIR PURGE INLET                                  
+            -3666,55.,  0.    $ AIR PURGE INLET, data capture only, afc 6/2/98   
+            -37,  -14., 0.    $ EXTERNAL AMBIENT AIR                             
+ C                                                                               
+ C        RP Tank Top Dome Surface - afc 5/31/98                                 
+ C                                                                               
+            -360, -30.,  0.   $ RP Tank Top Dome                                 
+ C                                                                               
+ C         PURGE FLOW NODES                                                      
+            350,  70., -1.                                                       
+            351,  70., -1.                                                       
+            352,  70., -1.                                                       
+ C         LOX TANK INSULATION                                                   
+            100,  70.,  1.    $ SS1171 MIDPOINT                                  
+            101,  70., -1.    $ SS1171 SURFACE                                   
+ C         CRYOFOAM INSULATION (MIDPOINTS)                                       
+            214,  70.,  1.                                                       
+            223,  70.,  1.                                                       
+            229,  70.,  1.                                                       
+            230,  70.,  1.                                                       
+            2301, 70.,  1.                                                       
+            231,  70.,  1.                                                       
+            232,  70.,  1.                                                       
+            233,  70.,  1.                                                       
+            234,  70.,  1.                                                       
+ C         CRYOFOAM INSULATION (SURFACES)                                        
+            314,  70., -1.                                                       
+            323,  70., -1.                                                       
+            329,  70., -1.                                                       
+            330,  70., -1.                                                       
+            3301, 70., -1.                                                       
+            331,  70., -1.                                                       
+            332,  70., -1.                                                       
+            333,  70., -1.                                                       
+            334,  70., -1.                                                       
+ C         HTA INSULATION (MIDPOINTS)                                            
+            414,  70.,  1.                                                       
+            423,  70.,  1.                                                       
+            429,  70.,  1.                                                       
+            430,  70.,  1.                                                       
+            4301, 70.,  1.                                                       
+            431,  70.,  1.                                                       
+            432,  70.,  1.                                                       
+            433,  70.,  1.                                                       
+            434,  70.,  1.                                                       
+ C         HTA INSULATION (SURFACES)                                             
+            514,  70., -1.                                                       
+            523,  70., -1.                                                       
+            529,  70., -1.                                                       
+            530,  70., -1.                                                       
+            5301, 70.,  1.                                                       
+            531,  70., -1.                                                       
+            532,  70., -1.                                                       
+            533,  70., -1.                                                       
+            534,  70., -1.                                                       
+        END                                                                      
+
+  NODAL ANALYSIS, DIFUS (CONSTANT=     37, VARIABLE=      0), ARITH=     59, BOUNDARY=    4, TOTAL=    100, NLC=    0
+
+     RELATIVE NUMBERS                                           ACTUAL NUMBERS
+
+       1 THRU     10 -        2        4       51        6        8       10       12       14       16       18
+      11 THRU     20 -     2000       23       25       27     2002       35     3555      100      214      223
+      21 THRU     30 -      229      230     2301      231      232      233      234      414      423      429
+      31 THRU     40 -      430     4301      431      432      433      434     5301        3        5       52
+      41 THRU     50 -        7        9       11       13       15       17       19       20       21       22
+      51 THRU     60 -     2701       24       26       28     2001     2003     2004     2005       29       30
+      61 THRU     70 -      301       31       32       33       34      114      123      129      130     1301
+      71 THRU     80 -      131      132      133      134       36      350      351      352      101      314
+      81 THRU     90 -      323      329      330     3301      331      332      333      334      514      523
+      91 THRU    100 -      529      530      531      532      533      534        1     3666       37      360
+1(C) COPYRIGHT 1982-1998 J.D.GASKI SINDA/G VERSION-1.80  ' - NETWORK ANALYSIS ASSOCIATES, INC.
+ AFT OV SKIRT                                                                                                            
+
+        BCD 3SOURCE DATA                                                         
+        END                                                                      
+
+  SOURCE ANALYSIS - CONSTANT IMPRESSED =      0, VARIABLE IMPRESSED =      0,  TOTAL =      0, NLQ=    0
+1(C) COPYRIGHT 1982-1998 J.D.GASKI SINDA/G VERSION-1.80  ' - NETWORK ANALYSIS ASSOCIATES, INC.
+ AFT OV SKIRT                                                                                                            
+
+        BCD 3CONDUCTOR DATA                                                      
+ C         FORWARD OV ALUMINUM-2219 SKIRT f=1.12,f=1.0                           
+        SIV    1,   1,  2,   A1,  6.60 $5.89        $CONDUCTION THROUGH SKIRT    
+        SIV    2,   2,  3,   A1,  6.60 $5.89        $CONDUCTION THROUGH SKIRT    
+        SIV    3,   3,  4,   A1,  8.57 $7.65        $CONDUCTION THROUGH SKIRT    
+        SIV    4,   4,  5,   A1,  8.57 $7.65        $CONDUCTION THROUGH SKIRT    
+        SIV    401, 5, 51,   A1,  6.28 $5.61        $CONDUCTION THROUGH SKIRT    
+        SIV    402, 51,52,   A1,  6.28 $5.61        $CONDUCTION THROUGH SKIRT    
+        SIV    5,   52, 6,   A1,  15.8 $14.1        $CONDUCTION THROUGH SKIRT    
+        SIV    6,   6,  7,   A1,  15.8 $14.1        $CONDUCTION THROUGH SKIRT    
+        SIV    7,   7,  8,   A1,  10.6 $9.45        $CONDUCTION THROUGH SKIRT    
+        SIV    8,   8,  9,   A1,  10.6 $9.45        $CONDUCTION THROUGH SKIRT    
+        SIV    9,   9,  10,  A1,  0.39 $0.35        $CONDUCTION THROUGH SKIRT    
+        SIV    10,  10, 11,  A1,  0.39 $0.35        $CONDUCTION THROUGH SKIRT    
+        SIV    11,  11, 12,  A1,  12.9 $11.5        $CONDUCTION THROUGH SKIRT    
+        SIV    12,  12, 13,  A1,  12.9 $11.5        $CONDUCTION THROUGH SKIRT    
+        SIV    13,  13, 16,  A1,  9.16 $8.18        $CONDUCTION THROUGH SKIRT    
+        SIV    14,  16, 21,  A1,  9.16 $8.18        $CONDUCTION THROUGH SKIRT    
+ C         FORWARD OV COMPOSITE SKIRT                                            
+        SIV    15,  21, 25,  A3,  8.18        $CONDUCTION THROUGH COMPOSITE SKIRT
+ C         SPLICE AREA - CONDUCTION PARALLEL TO SKIRT                            
+        SIV    16,  14, 20,  A2, 5.02        $CONDUCTION THROUGH ALUMINUM-7075   
+        SIV    17,  20, 23,  A2, 5.02        $CONDUCTION THROUGH ALUMINUM-7075   
+        SIV    18,  18, 22,  A3, 5.08        $CONDUCTION THROUGH BMI             
+        SIV    19,  22, 2000,A3, 85.6        $CONDUCTION THROUGH BMI             
+        SIV    191,2000,2701,A3, 85.6        $CONDUCTION THROUGH BMI             
+        SIV    192,2701,27,  A3, 5.08        $CONDUCTION THROUGH BMI             
+ C         FORWARD OV SKIRT - CONDUCTION PERPENDICULAR TO SKIRT (INNER)          
+        SIV    20,  2,  29,  A1, 1252.       $CONDUCTION THROUGH SKIRT           
+        SIV    21,  4,  30,  A1, 961.6       $CONDUCTION THROUGH SKIRT           
+        SIV    2101,51, 301, A1, 1312.       $CONDUCTION THROUGH SKIRT           
+        SIV    22,  6,  31,  A1, 522.0       $CONDUCTION THROUGH SKIRT           
+        SIV    23,  8,  32,  A1, 782.4       $CONDUCTION THROUGH SKIRT           
+        SIV    24,  10, 33,  A1, 19879.      $CONDUCTION THROUGH SKIRT           
+        SIV    25,  12, 34,  A1, 703.7       $CONDUCTION THROUGH SKIRT           
+ C         FORWARD OV SKIRT - CONDUCTION PERPENDICULAR TO SKIRT (OUTER)          
+        SIV    201, 2,  129, A1, 1252.       $CONDUCTION THROUGH SKIRT           
+        SIV    211, 4,  130, A1, 961.6       $CONDUCTION THROUGH SKIRT           
+        SIV    2111,51, 1301,A1, 1312.       $CONDUCTION THROUGH SKIRT           
+        SIV    221, 6,  131, A1, 522.0       $CONDUCTION THROUGH SKIRT           
+        SIV    231, 8,  132, A1, 782.4       $CONDUCTION THROUGH SKIRT           
+        SIV    241, 10, 133, A1, 19879.      $CONDUCTION THROUGH SKIRT           
+        SIV    251, 12, 134, A1, 703.7       $CONDUCTION THROUGH SKIRT           
+ C         SPLICE AREA - CONDUCTION PERPENDICULAR TO SKIRT                       
+        SIV    261, 114, 14, A2, 1552.       $CONDUCTION THROUGH ALUMINUM-7075   
+        SIV    26,  14,  15, A2, 1552.       $CONDUCTION THROUGH ALUMINUM-7075   
+        SIV    27,  15,  16, A1, 908.3       $CONDUCTION THROUGH ALUMINUM-2219   
+        SIV    28,  16,  17, A1, 908.3       $CONDUCTION THROUGH ALUMINUM-2219   
+        SIV    29,  17,  18, A3, 1452.       $CONDUCTION THROUGH BMI             
+        SIV    30,  18,  19, A3, 1452.       $CONDUCTION THROUGH BMI             
+ C         CONDUCTION PERPENDICULAR TO SKIRT THROUGH FRAME                       
+        SIV    301, 2000, 2001, A3, 94.3     $CONDUCTION THROUGH BMI FRAME       
+        SIV    302, 2001, 2002, A3, 3.32     $CONDUCTION THROUGH BMI FRAME       
+        SIV    303, 2002, 2005, A3, 3.32     $CONDUCTION THROUGH BMI FRAME       
+ C         CONDUCTION PARALLEL TO SKIRT THROUGH FRAME                            
+        SIV    304, 2002, 2003, A3, 2346.    $CONDUCTION THROUGH BMI FRAME       
+        SIV    305, 2002, 2004, A3, 2346.    $CONDUCTION THROUGH BMI FRAME       
+ C         SPLICE AREA (COMPOSITE SIDE)- CONDUCTION PERPENDICULAR TO SKIRT       
+        SIV    311, 123, 23, A2, 1552.       $CONDUCTION THROUGH ALUMINUM-7075   
+        SIV    31,  23,  24, A2, 1552.       $CONDUCTION THROUGH ALUMINUM-7075   
+        SIV    32,  24,  25, A3, 908.3       $CONDUCTION THROUGH BMI             
+        SIV    33,  25,  26, A3, 908.3       $CONDUCTION THROUGH BMI             
+        SIV    34,  26,  27, A3, 1452.       $CONDUCTION THROUGH BMI             
+        SIV    35,  27,  28, A3, 1452.       $CONDUCTION THROUGH BMI             
+ C        CONVECTION FROM INNER SURFACES                                         
+        FAC 1.97                                                                 
+               36,  19,  351, 8.62            $62%x1.53                          
+               37,  28,  35,  9.73            $x1.07                             
+               38,  29,  352, 23.8            $x0.00, crotch area                
+               39,  30,  351, 13.6            $x1.53                             
+               391, 301, 351, 13.4            $x1.53                             
+               40,  31,  351, 12.6            $x1.53                             
+               41,  32,  351, 11.0            $x1.53                             
+               42,  33,  351, 127.            $x1.53                             
+               43,  34,  351, 6.39            $65%x1.53                          
+               4311,2003,35,  9.73            $x1.07                             
+               4312,2004,351, 13.6            $98%x1.53                          
+               4313,2005,35,  0.55            $x1.07                             
+        FAC 1.00                                                                 
+ C        CONVECTION TO INNER SURFACES-DIRECT IMPINGEMENT                        
+               4314, 19,  350, 6.97           $38%xAx1.7                         
+               4315, 34,  350, 3.82           $35%xAx1.7                         
+               4316, 2004,350, 0.31           $2%xAx1.7                          
+ C        BLEED-OFF TO COMPARTMENT AIR                                           
+               9000,-36,   35, 156.                                              
+ C        CONVECTION FROM PURGE INLET                                            
+               600, -36,  350, 317.           $flow node for direct impingement  
+               601, -350, 351, 317.           $flow node for wash area           
+               602, -351, 352, 79.25          $25% to crotch area                
+               603, -351, 35 , 237.75         $75% to bulk air node              
+               604, -352, 35 , 79.25          $25% back to bulk air node         
+ C        CONVECTION FROM LOX INSULATION TO AMBIENT AIR                          
+               47,  101, 35,  625.    $1.07                                      
+ C                                                                               
+ C        CONVECTION FROM Top RP Tank Dome to Interior Bulk AIR, afc 5/31/98     
+ C                                                                               
+               470,  360, 35,  163.6   $A=152.9 x h=1.07                         
+ C                                                                               
+ C                                                                               
+ C        data capture node couplings, afc 6/02/98                               
+ C                                                                               
+               6666, -3666,  36, 317.           $flow node for data capature     
+               6555, -35,  3555, 317.           $flow node for data capature     
+ C                                                                               
+ C        CONDUCTION THROUGH SS1171 LOX TANK INSULATION                          
+        SIV    45,  1,   100, A4, 8520.                                          
+        SIV    46,  100, 101, A4, 8520.                                          
+ C        CONDUCTION THROUGH CRYOFOAM INSULATION(INNER)                          
+        FAC 1.20                                                                 
+               48,  114, 214, 6.08                                               
+               49,  123, 223, 6.08                                               
+               50,  129, 229, 9.36                                               
+               51,  130, 230, 5.27                                               
+               511, 1301,2301,5.27                                               
+               52,  131, 231, 5.02                                               
+               53,  132, 232, 4.28                                               
+               54,  133, 233, 49.5                                               
+               55,  134, 234, 4.15                                               
+ C        CONDUCTION THROUGH CRYOFOAM INSULATION(OUTER)                          
+               56,  214, 314, 6.08                                               
+               57,  223, 323, 6.08                                               
+               58,  229, 329, 9.36                                               
+               59,  230, 330, 5.27                                               
+               591, 2301,3301,5.27                                               
+               60,  231, 331, 5.02                                               
+               61,  232, 332, 4.28                                               
+               62,  233, 333, 49.5                                               
+               63,  234, 334, 4.15                                               
+        FAC 1.0                                                                  
+ C        CONDUCTION THROUGH HTA INSULATION(INNER)                               
+        FAC 2.80                                                                 
+               64,  314, 414, 3.54                                               
+               65,  323, 423, 3.54                                               
+               66,  329, 429, 6.13                                               
+               67,  330, 430, 3.41                                               
+               671, 3301,4301,3.38                                               
+               68,  331, 431, 3.20                                               
+               69,  332, 432, 2.76                                               
+               70,  333, 433, 32.1                                               
+               71,  334, 434, 2.48                                               
+ C        CONDUCTION THROUGH HTA INSULATION(OUTER)                               
+               72,  414, 514, 3.54                                               
+               73,  423, 523, 3.54                                               
+               74,  429, 529, 6.13                                               
+               75,  430, 530, 3.41                                               
+               751, 4301,5301,3.38                                               
+               76,  431, 531, 3.20                                               
+               77,  432, 532, 2.76                                               
+               78,  433, 533, 32.1                                               
+               79,  434, 534, 2.48                                               
+        FAC 1.0                                                                  
+ C        CONVECTION FROM HTA INSULATION TO OUTSIDE AMBIENT AIR                  
+               80,  514, 37,  8.00                                               
+               81,  523, 37,  8.00                                               
+               82,  529, 37,  13.8                                               
+               83,  530, 37,  7.78                                               
+               831, 5301,37,  7.71                                               
+               84,  531, 37,  7.27                                               
+               85,  532, 37,  6.29                                               
+               86,  533, 37,  72.8                                               
+               87,  534, 37,  5.72                                               
+ C        RADIATION FROM HTA INSULATION TO OUTSIDE AMBIENT AIR                   
+               -88, 514, 37,  7.25                                               
+               -89, 523, 37,  7.25                                               
+               -90, 529, 37,  12.5                                               
+               -91, 530, 37,  7.07                                               
+               -911,5301,37,  7.01                                               
+               -92, 531, 37,  6.61                                               
+               -93, 532, 37,  5.72                                               
+               -94, 533, 37,  66.2                                               
+               -95, 534, 37,  5.20                                               
+        END                                                                      
+
+  COND ANALYSIS - CONST=   79, VARB=   56 TOTAL=   135, EFF=   135, LIN=  126, RAD=     9, O/W=   8, NLG=   56
+
+     RELATIVE NUMBERS                                             ACTUAL NUMBERS
+
+       1 THRU     10           1         2         3         4       401       402         5         6         7         8
+      11 THRU     20           9        10        11        12        13        14        15        16        17        18
+      21 THRU     30          19       191       192        20        21      2101        22        23        24        25
+      31 THRU     40         201       211      2111       221       231       241       251       261        26        27
+      41 THRU     50          28        29        30       301       302       303       304       305       311        31
+      51 THRU     60          32        33        34        35        36        37        38        39       391        40
+      61 THRU     70          41        42        43      4311      4312      4313      4314      4315      4316      9000
+      71 THRU     80         600       601       602       603       604        47       470      6666      6555        45
+      81 THRU     90          46        48        49        50        51       511        52        53        54        55
+      91 THRU    100          56        57        58        59       591        60        61        62        63        64
+     101 THRU    110          65        66        67       671        68        69        70        71        72        73
+     111 THRU    120          74        75       751        76        77        78        79        80        81        82
+     121 THRU    130          83       831        84        85        86        87       -88       -89       -90       -91
+     131 THRU    135        -911       -92       -93       -94       -95
+1(C) COPYRIGHT 1982-1998 J.D.GASKI SINDA/G VERSION-1.80  ' - NETWORK ANALYSIS ASSOCIATES, INC.
+ AFT OV SKIRT                                                                                                            
+
+        BCD 3CONSTANTS                                                           
+            NDIM=15000                                                           
+            DRLXCA=0.01                                                          
+            ARLXCA=0.01                                                          
+            BALENG=0.1                                                           
+            NLOOP=1000.                                                          
+            SIGMA=0.1714E-8                                                      
+            100=22.0           $ LOX skirt purge flow (lbm/min)                  
+            101=0.0001         $ bypass purge flow (lbm/min)                     
+            110=1.18           $ "wash-area" h coeff. (btu/hr-ft^2-F)            
+            111=1.18           $ LOX dome insul. surface h coeff. (btu/hr-ft^2-F)
+            112=1.56           $ Jet direct impingment h coeff. (btu/hr-ft^2-F)  
+            113=0.0            $ behind debre shield h coeff. (btu/hr-ft^2-F)    
+            114=0.0001         $ Crotch area h coeff. (btu/hr-ft^2-F)            
+            120=-999.0         $ LOX Al skirt max temperature                    
+            121=999.0          $ LOX Al skirt min temperature                    
+            122=-999.0         $ LOX Composite skirt max temperature             
+            123=999.0          $ LOX Composite skirt min temperature             
+            130=0.0            $ output call accumulator variable                
+            140=55.0           $ purge supply temperature (F)                    
+            141=-14.0          $ exterior ambient temperature (F)                
+            150=1.07           $ top RP Tank dome h coeff. (btu/hr-ft^2-F), afc 5
+            160=0.0            $ net energy loss by bulk air (btu/hr), afc 6/02/9
+        END                                                                      
+
+ CONSTANTS - CC(  5/125), USER=  16, CAPC=   0, SRCE=   0, COND=  56, PRES=   0, TUBE=   0, TOTAL=   72
+
+     RELATIVE NUMBERS                                           ACTUAL NUMBERS
+
+       1 THRU     10           100      101      110      111      112      113      114      120      121      122
+      11 THRU     16           123      130      140      141      150      160
+1(C) COPYRIGHT 1982-1998 J.D.GASKI SINDA/G VERSION-1.80  ' - NETWORK ANALYSIS ASSOCIATES, INC.
+ AFT OV SKIRT                                                                                                            
+
+        BCD 3ARRAY DATA                                                          
+ C       AL-2219  K  VS.  TEMP.                                                  
+                 1, -350., 31., -300., 39., -200., 52.5, -100., 61.5             
+                          0., 69., 100., 74., 200., 78., 300., 82., END          
+ C       AL-7075  K  VS.  TEMP.                                                  
+                 2, -350., 80.5, 0., 91., 100., 94., 200., 98., 300., 101., END  
+ C       GRAPHITE/EPOXY K  VS.  TEMP.                                            
+                 3, -244., 0.289, 80., 0.520, 602., 0.809, END                   
+ C       SS1171 K  VS.  TEMP.                                                    
+                 4, -400., 0.004098, -200., 0.008894, -100., 0.011292            
+                          0., 0.01369, 100., 0.016088, 200., 0.018486            
+                          300., 0.020884, END                                    
+ C       CRYOFOAM K = 0.015                                                      
+ C       HTA K = 0.028                                                           
+        END                                                                      
+
+  ARRAY ANALYSIS - NUMBER OF ARRAYS =     4,  TOTAL LENGTH =      50
+
+                                   ACTUAL ARRAY NUMBERS VERSUS FORTRAN ADDRESSES
+
+ A      1=A(      1), A      2=A(     18), A      3=A(     29), A      4=A(     36), A
+ 
+1(C) COPYRIGHT 1982-1998 J.D.GASKI SINDA/G VERSION-1.80  - NETWORK ANALYSIS ASSOCIATES, INC.
+ AFT OV SKIRT                                                                                                            
+
+ *** NOTE: SEGMENT SIZE = 999547 - INFO ONLY
+
+ *** PSEUDO COMPUTE SEQUENCE 1 LENGTH IS    1063, PSEUDO COMPUTE SEQUENCE 2 LENGTH IS     168, TOTAL IS     1231
+1(C) COPYRIGHT 1982-1998 J.D.GASKI SINDA/G VERSION-1.80  - NETWORK ANALYSIS ASSOCIATES, INC.
+ AFT OV SKIRT                                                                                                            
+
+        BCD 3EXECUTION                                                           
+ F      open(8,file='aftovm1d_afc_c_08.out',access='sequential',                 
+ F    +  status='unknown')                                                       
+ M       XK130 = 0                                                               
+            SNDSNR                                                               
+        END                                                                      
+1(C) COPYRIGHT 1982-1998 J.D.GASKI SINDA/G VERSION-1.80  - NETWORK ANALYSIS ASSOCIATES, INC.
+ AFT OV SKIRT                                                                                                            
+
+        BCD 3VARIABLES 1                                                         
+ C                                                                               
+ CCM      T36=XK140 $ afc 6/2/98                                                 
+ M      T37=XK141                                                                
+ C                                                                               
+ M      G600=XK100 * 14.4                                                        
+ M      G601=XK100 * 14.4                                                        
+ M      G602=XK100 * 14.4 * 0.25          $25% to crotch area                    
+ M      G603=XK100 * 14.4 * 0.75          $75% to bulk air node                  
+ M      G604=XK100 * 14.4 * 0.25          $25% back to bulk air node             
+ M      G9000=XK101 * 14.4                                                       
+ C                                                                               
+ M      G36=XK110 * 1.97 * 5.64                                                  
+ M      G37=XK111 * 1.97 * 9.10                                                  
+ M      G38=XK114 * 1.00 * 15.60                                                 
+ M      G39=XK110 * 1.97 * 8.90                                                  
+ M      G391=XK110 * 1.97 * 8.80                                                 
+ M      G40=XK110 * 1.97 * 8.20                                                  
+ M      G41=XK110 * 1.97 * 7.20                                                  
+ M      G42=XK110 * 1.97 * 83.00                                                 
+ M      G43=XK110 * 1.97 * 4.16                                                  
+ M      G4311=XK111 * 1.97 * 9.10                                                
+ M      G4312=XK110 * 1.97 * 8.92                                                
+ M      G4313=XK111 * 1.97 * 0.50                                                
+ M      G4314=XK112 * 1.00 * 3.46                                                
+ M      G4315=XK112 * 1.00 * 2.24                                                
+ M      G4316=XK112 * 1.00 * 0.18                                                
+ M      G47=XK111 * 1.00 * 584.10                                                
+ C                                                                               
+ M      G470=XK150 * 152.9                                                       
+ C                                                                               
+ M      T3666=XK140                                                              
+ M      G6666=XK100 * 14.4                                                       
+ M      G6555=XK100 * 14.4                                                       
+ C                                                                               
+        END                                                                      
+1(C) COPYRIGHT 1982-1998 J.D.GASKI SINDA/G VERSION-1.80  - NETWORK ANALYSIS ASSOCIATES, INC.
+ AFT OV SKIRT                                                                                                            
+
+        BCD 3VARIABLES 2                                                         
+        END                                                                      
+1(C) COPYRIGHT 1982-1998 J.D.GASKI SINDA/G VERSION-1.80  - NETWORK ANALYSIS ASSOCIATES, INC.
+ AFT OV SKIRT                                                                                                            
+
+        BCD 3OUTPUT CALLS                                                        
+            TPRINT                                                               
+ C           QNPRNT                                                              
+ C           QDUMP                                                               
+ C                                                                               
+ M      XK120  = -999.0                                                          
+ M      XK121  =  999.0                                                          
+ M      XK122  = -999.0                                                          
+ M      XK123  =  999.0                                                          
+ C                                                                               
+ C  Determine LOX Al skirt max temperature                                       
+ C                                                                               
+ M      if (T2.gt.XK120) then                                                    
+ M        XK120 = T2                                                             
+ M      end if                                                                   
+ M      if (T3.gt.XK120) then                                                    
+ M        XK120 = T3                                                             
+ M      end if                                                                   
+ M      if (T4.gt.XK120) then                                                    
+ M        XK120 = T4                                                             
+ M      end if                                                                   
+ M      if (T5.gt.XK120) then                                                    
+ M        XK120 = T5                                                             
+ M      end if                                                                   
+ M      if (T6.gt.XK120) then                                                    
+ M        XK120 = T6                                                             
+ M      end if                                                                   
+ M      if (T7.gt.XK120) then                                                    
+ M        XK120 = T7                                                             
+ M      end if                                                                   
+ M      if (T8.gt.XK120) then                                                    
+ M        XK120 = T8                                                             
+ M      end if                                                                   
+ M      if (T9.gt.XK120) then                                                    
+ M        XK120 = T9                                                             
+ M      end if                                                                   
+ M      if (T10.gt.XK120) then                                                   
+ M        XK120 = T10                                                            
+ M      end if                                                                   
+ M      if (T11.gt.XK120) then                                                   
+ M        XK120 = T11                                                            
+ M      end if                                                                   
+ M      if (T12.gt.XK120) then                                                   
+ M        XK120 = T12                                                            
+ M      end if                                                                   
+ M      if (T13.gt.XK120) then                                                   
+ M        XK120 = T13                                                            
+ M      end if                                                                   
+ M      if (T14.gt.XK120) then                                                   
+ M        XK120 = T14                                                            
+ M      end if                                                                   
+ M      if (T15.gt.XK120) then                                                   
+ M        XK120 = T15                                                            
+ M      end if                                                                   
+ M      if (T16.gt.XK120) then                                                   
+ M        XK120 = T16                                                            
+ M      end if                                                                   
+ M      if (T20.gt.XK120) then                                                   
+ M        XK120 = T20                                                            
+ M      end if                                                                   
+ M      if (T23.gt.XK120) then                                                   
+ M        XK120 = T23                                                            
+ M      end if                                                                   
+ M      if (T29.gt.XK120) then                                                   
+ M        XK120 = T29                                                            
+ M      end if                                                                   
+ M      if (T30.gt.XK120) then                                                   
+ M        XK120 = T30                                                            
+ M      end if                                                                   
+ M      if (T31.gt.XK120) then                                                   
+ M        XK120 = T31                                                            
+ M      end if                                                                   
+ M      if (T32.gt.XK120) then                                                   
+ M        XK120 = T32                                                            
+ M      end if                                                                   
+ M      if (T33.gt.XK120) then                                                   
+ M        XK120 = T33                                                            
+ M      end if                                                                   
+ M      if (T34.gt.XK120) then                                                   
+ M        XK120 = T34                                                            
+ M      end if                                                                   
+ M      if (T51.gt.XK120) then                                                   
+ M        XK120 = T51                                                            
+ M      end if                                                                   
+ M      if (T52.gt.XK120) then                                                   
+ M        XK120 = T52                                                            
+ M      end if                                                                   
+ M      if (T114.gt.XK120) then                                                  
+ M        XK120 = T114                                                           
+ M      end if                                                                   
+ M      if (T123.gt.XK120) then                                                  
+ M        XK120 = T123                                                           
+ M      end if                                                                   
+ M      if (T129.gt.XK120) then                                                  
+ M        XK120 = T129                                                           
+ M      end if                                                                   
+ M      if (T130.gt.XK120) then                                                  
+ M        XK120 = T130                                                           
+ M      end if                                                                   
+ M      if (T131.gt.XK120) then                                                  
+ M        XK120 = T131                                                           
+ M      end if                                                                   
+ M      if (T132.gt.XK120) then                                                  
+ M        XK120 = T132                                                           
+ M      end if                                                                   
+ M      if (T133.gt.XK120) then                                                  
+ M        XK120 = T133                                                           
+ M      end if                                                                   
+ M      if (T134.gt.XK120) then                                                  
+ M        XK120 = T134                                                           
+ M      end if                                                                   
+ M      if (T301.gt.XK120) then                                                  
+ M        XK120 = T301                                                           
+ M      end if                                                                   
+ M      if (T1301.gt.XK120) then                                                 
+ M        XK120 = T1301                                                          
+ M      end if                                                                   
+ M      if (T17.gt.XK120) then                                                   
+ M        XK120 = T17                                                            
+ M      end if                                                                   
+ M      if (T21.gt.XK120) then                                                   
+ M        XK120 = T21                                                            
+ M      end if                                                                   
+ M      if (T24.gt.XK120) then                                                   
+ M        XK120 = T24                                                            
+ M      end if                                                                   
+ C                                                                               
+ C                                                                               
+ C  Determine LOX Al skirt min temperature                                       
+ C                                                                               
+ M      if (T2.lt.XK121) then                                                    
+ M        XK121 = T2                                                             
+ M      end if                                                                   
+ M      if (T3.lt.XK121) then                                                    
+ M        XK121 = T3                                                             
+ M      end if                                                                   
+ M      if (T4.lt.XK121) then                                                    
+ M        XK121 = T4                                                             
+ M      end if                                                                   
+ M      if (T5.lt.XK121) then                                                    
+ M        XK121 = T5                                                             
+ M      end if                                                                   
+ M      if (T6.lt.XK121) then                                                    
+ M        XK121 = T6                                                             
+ M      end if                                                                   
+ M      if (T7.lt.XK121) then                                                    
+ M        XK121 = T7                                                             
+ M      end if                                                                   
+ M      if (T8.lt.XK121) then                                                    
+ M        XK121 = T8                                                             
+ M      end if                                                                   
+ M      if (T9.lt.XK121) then                                                    
+ M        XK121 = T9                                                             
+ M      end if                                                                   
+ M      if (T10.lt.XK121) then                                                   
+ M        XK121 = T10                                                            
+ M      end if                                                                   
+ M      if (T11.lt.XK121) then                                                   
+ M        XK121 = T11                                                            
+ M      end if                                                                   
+ M      if (T12.lt.XK121) then                                                   
+ M        XK121 = T12                                                            
+ M      end if                                                                   
+ M      if (T13.lt.XK121) then                                                   
+ M        XK121 = T13                                                            
+ M      end if                                                                   
+ M      if (T14.lt.XK121) then                                                   
+ M        XK121 = T14                                                            
+ M      end if                                                                   
+ M      if (T15.lt.XK121) then                                                   
+ M        XK121 = T15                                                            
+ M      end if                                                                   
+ M      if (T16.lt.XK121) then                                                   
+ M        XK121 = T16                                                            
+ M      end if                                                                   
+ M      if (T20.lt.XK121) then                                                   
+ M        XK121 = T20                                                            
+ M      end if                                                                   
+ M      if (T23.lt.XK121) then                                                   
+ M        XK121 = T23                                                            
+ M      end if                                                                   
+ M      if (T29.lt.XK121) then                                                   
+ M        XK121 = T29                                                            
+ M      end if                                                                   
+ M      if (T30.lt.XK121) then                                                   
+ M        XK121 = T30                                                            
+ M      end if                                                                   
+ M      if (T31.lt.XK121) then                                                   
+ M        XK121 = T31                                                            
+ M      end if                                                                   
+ M      if (T32.lt.XK121) then                                                   
+ M        XK121 = T32                                                            
+ M      end if                                                                   
+ M      if (T33.lt.XK121) then                                                   
+ M        XK121 = T33                                                            
+ M      end if                                                                   
+ M      if (T34.lt.XK121) then                                                   
+ M        XK121 = T34                                                            
+ M      end if                                                                   
+ M      if (T51.lt.XK121) then                                                   
+ M        XK121 = T51                                                            
+ M      end if                                                                   
+ M      if (T52.lt.XK121) then                                                   
+ M        XK121 = T52                                                            
+ M      end if                                                                   
+ M      if (T114.lt.XK121) then                                                  
+ M        XK121 = T114                                                           
+ M      end if                                                                   
+ M      if (T123.lt.XK121) then                                                  
+ M        XK121 = T123                                                           
+ M      end if                                                                   
+ M      if (T129.lt.XK121) then                                                  
+ M        XK121 = T129                                                           
+ M      end if                                                                   
+ M      if (T130.lt.XK121) then                                                  
+ M        XK121 = T130                                                           
+ M      end if                                                                   
+ M      if (T131.lt.XK121) then                                                  
+ M        XK121 = T131                                                           
+ M      end if                                                                   
+ M      if (T132.lt.XK121) then                                                  
+ M        XK121 = T132                                                           
+ M      end if                                                                   
+ M      if (T133.lt.XK121) then                                                  
+ M        XK121 = T133                                                           
+ M      end if                                                                   
+ M      if (T134.lt.XK121) then                                                  
+ M        XK121 = T134                                                           
+ M      end if                                                                   
+ M      if (T301.lt.XK121) then                                                  
+ M        XK121 = T301                                                           
+ M      end if                                                                   
+ M      if (T1301.lt.XK121) then                                                 
+ M        XK121 = T1301                                                          
+ M      end if                                                                   
+ M      if (T17.lt.XK121) then                                                   
+ M        XK121 = T17                                                            
+ M      end if                                                                   
+ M      if (T21.lt.XK121) then                                                   
+ M        XK121 = T21                                                            
+ M      end if                                                                   
+ M      if (T24.lt.XK121) then                                                   
+ M        XK121 = T24                                                            
+ M      end if                                                                   
+ C                                                                               
+ C                                                                               
+ C  Determine LOX Composite skirt max temperature                                
+ C                                                                               
+ M      if (T18.gt.XK122) then                                                   
+ M        XK122 = T18                                                            
+ M      end if                                                                   
+ M      if (T19.gt.XK122) then                                                   
+ M        XK122 = T19                                                            
+ M      end if                                                                   
+ M      if (T22.gt.XK122) then                                                   
+ M        XK122 = T22                                                            
+ M      end if                                                                   
+ M      if (T25.gt.XK122) then                                                   
+ M        XK122 = T25                                                            
+ M      end if                                                                   
+ M      if (T26.gt.XK122) then                                                   
+ M        XK122 = T26                                                            
+ M      end if                                                                   
+ M      if (T27.gt.XK122) then                                                   
+ M        XK122 = T27                                                            
+ M      end if                                                                   
+ M      if (T28.gt.XK122) then                                                   
+ M        XK122 = T28                                                            
+ M      end if                                                                   
+ M      if (T2000.gt.XK122) then                                                 
+ M        XK122 = T2000                                                          
+ M      end if                                                                   
+ M      if (T2001.gt.XK122) then                                                 
+ M        XK122 = T2001                                                          
+ M      end if                                                                   
+ M      if (T2002.gt.XK122) then                                                 
+ M        XK122 = T2002                                                          
+ M      end if                                                                   
+ M      if (T2003.gt.XK122) then                                                 
+ M        XK122 = T2003                                                          
+ M      end if                                                                   
+ M      if (T2004.gt.XK122) then                                                 
+ M        XK122 = T2004                                                          
+ M      end if                                                                   
+ M      if (T2005.gt.XK122) then                                                 
+ M        XK122 = T2005                                                          
+ M      end if                                                                   
+ M      if (T2701.gt.XK122) then                                                 
+ M        XK122 = T2701                                                          
+ M      end if                                                                   
+ M      if (T17.gt.XK122) then                                                   
+ M        XK122 = T17                                                            
+ M      end if                                                                   
+ M      if (T21.gt.XK122) then                                                   
+ M        XK122 = T21                                                            
+ M      end if                                                                   
+ M      if (T24.gt.XK122) then                                                   
+ M        XK122 = T24                                                            
+ M      end if                                                                   
+ C                                                                               
+ C                                                                               
+ C  Determine LOX Composite skirt min temperature                                
+ C                                                                               
+ M      if (T18.lt.XK123) then                                                   
+ M        XK123 = T18                                                            
+ M      end if                                                                   
+ M      if (T19.lt.XK123) then                                                   
+ M        XK123 = T19                                                            
+ M      end if                                                                   
+ M      if (T22.lt.XK123) then                                                   
+ M        XK123 = T22                                                            
+ M      end if                                                                   
+ M      if (T25.lt.XK123) then                                                   
+ M        XK123 = T25                                                            
+ M      end if                                                                   
+ M      if (T26.lt.XK123) then                                                   
+ M        XK123 = T26                                                            
+ M      end if                                                                   
+ M      if (T27.lt.XK123) then                                                   
+ M        XK123 = T27                                                            
+ M      end if                                                                   
+ M      if (T28.lt.XK123) then                                                   
+ M        XK123 = T28                                                            
+ M      end if                                                                   
+ M      if (T2000.lt.XK123) then                                                 
+ M        XK123 = T2000                                                          
+ M      end if                                                                   
+ M      if (T2001.lt.XK123) then                                                 
+ M        XK123 = T2001                                                          
+ M      end if                                                                   
+ M      if (T2002.lt.XK123) then                                                 
+ M        XK123 = T2002                                                          
+ M      end if                                                                   
+ M      if (T2003.lt.XK123) then                                                 
+ M        XK123 = T2003                                                          
+ M      end if                                                                   
+ M      if (T2004.lt.XK123) then                                                 
+ M        XK123 = T2004                                                          
+ M      end if                                                                   
+ M      if (T2005.lt.XK123) then                                                 
+ M        XK123 = T2005                                                          
+ M      end if                                                                   
+ M      if (T2701.lt.XK123) then                                                 
+ M        XK123 = T2701                                                          
+ M      end if                                                                   
+ M      if (T17.lt.XK123) then                                                   
+ M        XK123 = T17                                                            
+ M      end if                                                                   
+ M      if (T21.lt.XK123) then                                                   
+ M        XK123 = T21                                                            
+ M      end if                                                                   
+ M      if (T24.lt.XK123) then                                                   
+ M        XK123 = T24                                                            
+ M      end if                                                                   
+ C                                                                               
+ M      XK160 = G6666 * (T3555 - T3666)                                          
+ C                                                                               
+ M      XK130 = XK130 + 1.0                                                      
+ M      if (XK130.gt.2.0) then                                                   
+ M        write(8,991) T35,T350,T351,T352,XK120,XK121,XK122,XK123,XK160          
+ M      endif                                                                    
+ F 991 format(1x,9(E14.7,1x))                                                    
+        END                                                                      
+1(C) COPYRIGHT 1982-1998 J.D.GASKI SINDA/G VERSION-1.80  - NETWORK ANALYSIS ASSOCIATES, INC.
+ AFT OV SKIRT                                                                                                            
+
+        BCD 3END OF DATA                                                         
+
+                        *** SUCCESSFUL SINDA/G VERSION-1.80  PREPROCESS ***
+                                             *** CONGRATULATIONS, PROCEED TO THE COMPILER ***
+
